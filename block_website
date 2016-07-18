@@ -1,0 +1,9 @@
+#! /bin/bash
+
+if [ "$1" == "" ]; then
+       echo "Usage: block_website url"
+else
+       echo $1
+       adres="$(nslookup $1 | grep Address*)"
+       echo $adres
+fi
